@@ -1,0 +1,17 @@
+{
+  "name": "gio-bot",
+  "version": "1.0.0",
+  "description": "gio`s-bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "ok"
+  },
+  "author": "Defaa",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {},
+  "keywords": []
+}
