@@ -1,8 +1,9 @@
+//Llamamos a las constantes
 const fs = require('fs');
 const Discord = require('discord.js');
 require("dotenv").config();
 
-
+//Hacemos el Command Handler
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
@@ -18,6 +19,7 @@ for (const folder of commandFolders) {
 
 const cooldowns = new Discord.Collection();
 
+//Configuramos precencia y estado
 client.once('ready', () => {
 	console.log('Ready!');
 	client.user.setPresence({
@@ -29,6 +31,7 @@ client.once('ready', () => {
   });
 });
 
+//Armamos una instancia de commandos  
 client.on('message', message => {
 	console.log(message.content);
 	if (!message.content.startsWith(process.env.PREFIX) || message.author.bot) return;
@@ -90,4 +93,6 @@ client.on('message', message => {
 	}
 
 });
+
+//Conectamos nuestro bot con discord.js
 client.login(process.env.DISCORD_TOKEN);
